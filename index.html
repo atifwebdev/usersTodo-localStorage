@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup Form</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <main>
+        <div id="form-login">
+            <section class="section-login">
+                <div class="section-main">
+                    <div class="section-login-1">
+                        <div class="section-login-1-main">
+                            <h1 class="section-login-1-title">Welcome to Our Site</h1>
+                            <p class="section-login-1-text">Please fill the Login form</p>
+                            <div class="section-login-1-img">
+                                <img src="./assets/img/imglogin.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-login-2">
+                        <div class="section-login-2-main">
+                            <h1 class="section-login-2-title">Login</h1>
+                            <form id="loginacc" class="section-login-2-form" onsubmit="loginSub(event)">
+                                <div class="login-form-1">
+                                    <label for="input-email">Email</label>
+                                    <input type="text" id="input-email-login" placeholder="john@example.com" required>
+                                </div>
+                                <div class="login-form-3">
+                                    <label for="input-password">Password</label>
+                                    <input type="password" id="input-password-login" placeholder="At least 7 characters" required>
+                                </div>
+                                <div class="login-form-submit-btn">
+                                    <button type="submit">Login</button>
+                                </div>
+                                <div class="login-form-5">
+                                    <p>Don't have an account? <span id="signup_btn" onclick="signupFunc(event)">Sign up here</span></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="form-signup">
+            <section class="section-login">
+                <div class="section-main">
+                    <div class="section-login-1">
+                        <div class="section-login-1-main">
+                            <h1 class="section-login-1-title">Welcome to Our Site</h1>
+                            <p class="section-login-1-text">Please fill all the fields in Signup form</p>
+                            <div class="section-login-1-img">
+                                <img src="./assets/img/imgsignup.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-login-2">
+                        <div class="section-login-2-main">
+                            <h1 class="section-login-2-title">Signup</h1>
+                            <form id="create_act" class="section-login-2-form signup_form" onsubmit="signupSub(event)">
+                                <div class="login-form-1">
+                                    <label for="input-email">Email</label>
+                                    <input type="text" id="input-email" placeholder="john@example.com" required>
+                                </div>
+                                <div class="login-form-2">
+                                    <label for="input-name">Full Name</label>
+                                    <input type="text" id="input-name" placeholder="John Doe" required>
+                                </div>
+                                <div class="login-form-3">
+                                    <label for="input-password">Password</label>
+                                    <input type="password" id="input-password" placeholder="At least 7 characters" required>
+                                </div>
+                                <div class="login-form-4">
+                                    <input type="checkbox" id="input-checkbox">
+                                    <p>By creating an account, you agree to the <a href="#">Terms & Conditions.</a></p>
+                                </div>
+                                <div class="login-form-submit-btn">
+                                    <button type="submit" data-swal-toast-template="#my-template">Create an Account</button>
+                                </div>
+                                <div class="login-form-5">
+                                    <p>Already have an account? <span id="login_btn" onclick="loginFunc(event)">Login here</span></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <template id="my-template">
+        <swal-title>
+          Save changes to "Untitled 1" before closing?
+        </swal-title>
+        <swal-icon type="warning" color="red"></swal-icon>
+        <swal-button type="confirm">
+          Save As
+        </swal-button>
+        <swal-button type="cancel">
+          Cancel
+        </swal-button>
+        <swal-button type="deny">
+          Close without Saving
+        </swal-button>
+        <swal-param name="allowEscapeKey" value="false" />
+        <swal-param
+          name="customClass"
+          value='{ "popup": "my-popup" }' />
+        <swal-function-param
+          name="didOpen"
+          value="popup => console.log(popup)" />
+      </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
